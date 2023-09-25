@@ -1,12 +1,13 @@
 import React from "react";
-// import "";
+import "./nav.css";
+// import "./404.png";
 export default function NavBar() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid ">
-          <a class="navbar-brand" href="/">
-            {/* <img src="" alt="o" width="30" height="24" /> */}
+          <a className="navbar-brand" href="/">
+            {/* <img src="404.png" alt="o" width="30" height="24" /> */}
             PROFILE DETECTOR
           </a>
 
@@ -21,80 +22,88 @@ export default function NavBar() {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarNavDropdown">
+          <div
+            className="collapse navbar-collapse rside"
+            id="navbarNavDropdown"
+          >
             <ul className="navbar-nav">
               <li className="nav-item">
                 <a className="nav-link active" aria-current="page" href="/">
-                  Home
+                  community
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/">
-                  Features
+                  blog
                 </a>
               </li>
 
-              <button
-                class="btn btn-outline-secondary dropdown-toggle "
-                type="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Dropdown
-              </button>
-              <ul class="dropdown-menu dropdown-menu-end">
-                <li>
-                  <a className="dropdown-item" href="/">
-                    Action
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="/">
-                    Another action
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="/">
-                    Something else here
-                  </a>
-                </li>
-                <li>
-                  <hr className="dropdown-divider" />
-                </li>
-                <li>
-                  <a className="dropdown-item" href="/">
-                    Separated link
-                  </a>
-                </li>
-              </ul>
-              {/* <li className="nav-item dropdown  ">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="/"
-                  role="button"
+              <div className="dropdown">
+                <button
+                  type="button"
+                  className="btn btn-primary dropdown-toggle "
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
+                  data-bs-auto-close="outside"
                 >
-                  Dropdown link
-                </a>
-                <ul className="dropdown-menu">
-                  <li>
-                    <a className="dropdown-item" href="/">
-                      Action
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="/">
-                      Another action
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="/">
-                      Something else here
-                    </a>
-                  </li>
-                </ul>
-              </li> */}
+                  account
+                </button>
+                <form className="dropdown-menu p-4">
+                  <div className="mb-3">
+                    <label
+                      htmlFor="exampleDropdownFormEmail2"
+                      className="form-label"
+                    >
+                      Email address
+                    </label>
+                    <input
+                      type="email"
+                      className="form-control"
+                      id="exampleDropdownFormEmail2"
+                      placeholder="email@example.com"
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <label
+                      htmlFor="exampleDropdownFormPassword2"
+                      className="form-label"
+                    >
+                      Password
+                    </label>
+                    <input
+                      type="password"
+                      className="form-control"
+                      id="exampleDropdownFormPassword2"
+                      placeholder="Password"
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <div className="form-check">
+                      <input
+                        type="checkbox"
+                        className="form-check-input"
+                        id="dropdownCheck2"
+                      />
+                      <label
+                        className="form-check-label"
+                        htmlFor="dropdownCheck2"
+                      >
+                        Remember me
+                      </label>
+                    </div>
+                  </div>
+                  <button type="submit" className="btn btn-primary">
+                    Sign in
+                  </button>
+                  <div className="dropdown-divider"></div>
+                  <a className="dropdown-item" href="/">
+                    New around here? Sign up
+                  </a>
+                  <a className="dropdown-item" href="/">
+                    Forgot password?
+                  </a>
+                </form>
+              </div>
             </ul>
           </div>
         </div>

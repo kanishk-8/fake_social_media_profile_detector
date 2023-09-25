@@ -1,0 +1,6 @@
+/* /* .rside {
+  display: flex;
+} */
+rside {
+  justify-content: end;
+}

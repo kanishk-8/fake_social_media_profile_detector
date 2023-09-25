@@ -23,6 +23,9 @@ import React, { useState } from "react";
 const FakeSocialMediaDetector = () => {
   const [username, setUsername] = useState("");
   const [result, setResult] = useState("");
+  // const [showModal, setShowModal] = useState(false);
+  // const [username, setUsername] = useState("");
+  const [reason, setReason] = useState("");
   const detectFakeAccount = async () => {
     // Send username to server for analysis
     // Receive response from server with fake score
@@ -43,19 +46,39 @@ const FakeSocialMediaDetector = () => {
     }
   };
 
-  const reportFakeAccount = async () => {
-    const username = prompt("Enter the username of the fake account:");
-    const reason = prompt("Enter the reason for reporting the fake account:");
+  // const reportFakeAccount = async () => {
+  //   const username = prompt("Enter the username of the fake account:");
+  //   const reason = prompt("Enter the reason for reporting the fake account:");
 
-    if (username && reason) {
-      // Send username and reason to server for verification
-      alert(
-        "Thank you for reporting the fake account. We will review your report and take appropriate action."
-      );
-    } else {
-      alert(
-        "Please enter both username and reason for reporting the fake account."
-      );
+  //   if (username && reason) {
+  //     // Send username and reason to server for verification
+  //     alert(
+  //       "Thank you for reporting the fake account. We will review your report and take appropriate action."
+  //     );
+  //   } else {
+  //     alert(
+  //       "Please enter both username and reason for reporting the fake account."
+  //     );
+  //   }
+
+  // const openModal = () => {
+  //   setShowModal(true);
+  // };
+
+  // const closeModal = () => {
+  //   setShowModal(false);
+  // };
+
+  const onSubmit = async () => {
+    // Validate the username and reason
+    if (!username) {
+      alert("Please enter a username.");
+      return;
+    }
+
+    if (!reason) {
+      alert("Please enter a reason for reporting the fake account.");
+      return;
     }
   };
 
@@ -95,6 +118,63 @@ const FakeSocialMediaDetector = () => {
         </button>
 
         {/* modal */}
+
+        <div
+          className="modal fade"
+          id="exampleModalToggle2"
+          tabIndex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h1 className="modal-title fs-5" id="exampleModalLabel">
+                  REPORT FAKE ACCOUNT
+                </h1>
+                <button
+                  type="button"
+                  className="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div className="modal-body">
+                <input
+                  type="text"
+                  placeholder="Enter the username of the fake account"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                />
+                <input
+                  type="text"
+                  placeholder="Enter the reason for reporting the fake account"
+                  value={reason}
+                  onChange={(e) => setReason(e.target.value)}
+                />
+              </div>
+              <div className="modal-footer">
+                <button
+                  type="button"
+                  className="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Cancel
+                </button>
+                <button
+                  className="btn btn-danger"
+                  variant="primary"
+                  onClick={onSubmit}
+                  data-bs-dismiss="modal"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* modal2  */}
         <div
           className="modal fade"
           id="exampleModal"
@@ -130,7 +210,9 @@ const FakeSocialMediaDetector = () => {
                 <button
                   id="report-button"
                   className="btn btn-danger"
-                  onClick={reportFakeAccount}
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModalToggle2"
+                  // onClick={reportFakeAccount}
                 >
                   {/* <img src="^2^" alt="" width="20" height="20" /> */}
                   Report Fake Account
