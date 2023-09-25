@@ -132,7 +132,7 @@ const FakeSocialMediaDetector = () => {
                   className="btn btn-danger"
                   onClick={reportFakeAccount}
                 >
-                  <img src="^2^" alt="Red" width="20" height="20" />
+                  {/* <img src="^2^" alt="" width="20" height="20" /> */}
                   Report Fake Account
                 </button>
               </div>

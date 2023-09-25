@@ -1,18 +1,13 @@
 import React from "react";
-
-// import PropTypes from "prop-types";
+// import "";
 export default function NavBar() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid">
+        <div className="container-fluid ">
           <a class="navbar-brand" href="/">
-            <img
-              src="./components/logo.gif"
-              alt="Bootstrap"
-              width="30"
-              height="24"
-            />
+            {/* <img src="" alt="o" width="30" height="24" /> */}
+            PROFILE DETECTOR
           </a>
 
           <button
@@ -38,7 +33,41 @@ export default function NavBar() {
                   Features
                 </a>
               </li>
-              <li className="nav-item dropdown  ">
+
+              <button
+                class="btn btn-outline-secondary dropdown-toggle "
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a className="dropdown-item" href="/">
+                    Action
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="/">
+                    Another action
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="/">
+                    Something else here
+                  </a>
+                </li>
+                <li>
+                  <hr className="dropdown-divider" />
+                </li>
+                <li>
+                  <a className="dropdown-item" href="/">
+                    Separated link
+                  </a>
+                </li>
+              </ul>
+              {/* <li className="nav-item dropdown  ">
                 <a
                   className="nav-link dropdown-toggle"
                   href="/"
@@ -65,7 +94,7 @@ export default function NavBar() {
                     </a>
                   </li>
                 </ul>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
