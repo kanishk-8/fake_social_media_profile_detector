@@ -1,12 +1,15 @@
 import "./App.css";
-import "./components/detector";
-import "./components/report";
 import NavBar from "./components/NavBar";
+import LoginForm from "./components/Form";
 
 function App() {
   return (
     <>
-      <NavBar tittle="fake profile detector" />
+      <NavBar />
+
+      <div className="container my-3">
+        <LoginForm />
+      </div>
     </>
   );
 }
