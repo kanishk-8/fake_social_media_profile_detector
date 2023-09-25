@@ -1,30 +1,8 @@
-// import React from "react";
-
-// const LoginForm = () => {
-//   return (
-//     <div className="container-fluid">
-//       <div>
-//         <input
-//           type="text"
-//           className="form-control"
-//           placeholder="Username"
-//           aria-label="Username"
-//           aria-describedby="basic-addon1"
-//         />
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default LoginForm;
-
 import React, { useState } from "react";
 
 const FakeSocialMediaDetector = () => {
   const [username, setUsername] = useState("");
   const [result, setResult] = useState("");
-  // const [showModal, setShowModal] = useState(false);
-  // const [username, setUsername] = useState("");
   const [reason, setReason] = useState("");
   const detectFakeAccount = async () => {
     // Send username to server for analysis
@@ -45,29 +23,6 @@ const FakeSocialMediaDetector = () => {
       );
     }
   };
-
-  // const reportFakeAccount = async () => {
-  //   const username = prompt("Enter the username of the fake account:");
-  //   const reason = prompt("Enter the reason for reporting the fake account:");
-
-  //   if (username && reason) {
-  //     // Send username and reason to server for verification
-  //     alert(
-  //       "Thank you for reporting the fake account. We will review your report and take appropriate action."
-  //     );
-  //   } else {
-  //     alert(
-  //       "Please enter both username and reason for reporting the fake account."
-  //     );
-  //   }
-
-  // const openModal = () => {
-  //   setShowModal(true);
-  // };
-
-  // const closeModal = () => {
-  //   setShowModal(false);
-  // };
 
   const onSubmit = async () => {
     // Validate the username and reason
@@ -212,9 +167,7 @@ const FakeSocialMediaDetector = () => {
                   className="btn btn-danger"
                   data-bs-toggle="modal"
                   data-bs-target="#exampleModalToggle2"
-                  // onClick={reportFakeAccount}
                 >
-                  {/* <img src="^2^" alt="" width="20" height="20" /> */}
                   Report Fake Account
                 </button>
               </div>

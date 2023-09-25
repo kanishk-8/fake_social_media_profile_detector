@@ -6,7 +6,6 @@ function App() {
   return (
     <>
       <NavBar />
-
       <div className="container my-3">
         <LoginForm />
       </div>
