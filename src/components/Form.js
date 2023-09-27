@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Form.css";
 
 const FakeSocialMediaDetector = () => {
   const [username, setUsername] = useState("");
@@ -40,19 +41,17 @@ const FakeSocialMediaDetector = () => {
   return (
     <div id="container">
       {/* <div id="title">Fake Social Media Detector</div> */}
-      <div className="container-fluid ">
-        <h1>
-          Enter the username of any social media account and find out if it is
-          fake or not.
-        </h1>
+      <div className="container-fluid cont">
+        <h1>Enter the profile link</h1>
+        <p>Enter the profile link you want to check</p>
       </div>
       <div className="input-group flex-nowrap">
-        <span className="input-group-text" id="addon-wrapping">
+        {/* <span className="input-group-text" id="addon-wrapping">
           @
-        </span>
+        </span> */}
         <input
           id="input"
-          className="form-control"
+          className="form-control me-2"
           placeholder="Username"
           aria-label="Username"
           aria-describedby="basic-addon1"
@@ -63,7 +62,7 @@ const FakeSocialMediaDetector = () => {
       <div className="d-grid gap-2">
         <button
           id="button"
-          className="btn btn-primary"
+          className="btn btn-primary boton"
           data-bs-toggle="modal"
           data-bs-target="#exampleModal"
           onClick={detectFakeAccount}

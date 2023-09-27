@@ -1,0 +1,19 @@
+.cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#container {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  width: 60%;
+  margin: 100px auto 0 auto;
+  padding: 30px;
+}
+.boton {
+  margin-top: 10px;
+  width: 500px;
+}

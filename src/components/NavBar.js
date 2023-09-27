@@ -38,7 +38,7 @@ export default function NavBar() {
                 </a>
               </li>
 
-              <div className="dropdown">
+              {/* <div className="dropdown d-flex">
                 <button
                   type="button"
                   className="btn btn-primary dropdown-toggle "
@@ -103,7 +103,7 @@ export default function NavBar() {
                     Forgot password?
                   </a>
                 </form>
-              </div>
+              </div> */}
             </ul>
           </div>
         </div>
