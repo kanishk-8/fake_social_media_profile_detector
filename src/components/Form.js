@@ -42,8 +42,8 @@ const FakeSocialMediaDetector = () => {
     <div id="container">
       {/* <div id="title">Fake Social Media Detector</div> */}
       <div className="container-fluid cont">
-        <h1>Enter the profile link</h1>
-        <p>Enter the profile link you want to check</p>
+        <h1>ENTER THE PROFILE LINK</h1>
+        {/* <p>Enter the profile link you want to check</p> */}
       </div>
       <div className="input-group flex-nowrap">
         {/* <span className="input-group-text" id="addon-wrapping">
@@ -52,7 +52,7 @@ const FakeSocialMediaDetector = () => {
         <input
           id="input"
           className="form-control me-2"
-          placeholder="Username"
+          placeholder="Enter the profile link you want to check"
           aria-label="Username"
           aria-describedby="basic-addon1"
           value={username}
@@ -62,7 +62,7 @@ const FakeSocialMediaDetector = () => {
       <div className="d-grid gap-2">
         <button
           id="button"
-          className="btn btn-primary boton"
+          className="btn btn-outline-primary boton"
           data-bs-toggle="modal"
           data-bs-target="#exampleModal"
           onClick={detectFakeAccount}
@@ -93,20 +93,27 @@ const FakeSocialMediaDetector = () => {
                   aria-label="Close"
                 ></button>
               </div>
-              <div className="modal-body">
-                <input
+              <div className="modal-body reportacc">
+                {/* <input
                   type="text"
+                  className="form-control"
                   placeholder="Enter the username of the fake account"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
-                />
+                /> */}
+                <h4 className="usernm">
+                  Do you want to report this profile : "{username}"
+                </h4>
                 <input
                   type="text"
-                  placeholder="Enter the reason for reporting the fake account"
+                  className="form-control"
+                  // placeholder="Enter the reason for reporting the fake account"
+                  required
                   value={reason}
                   onChange={(e) => setReason(e.target.value)}
                 />
               </div>
+
               <div className="modal-footer">
                 <button
                   type="button"
@@ -132,7 +139,7 @@ const FakeSocialMediaDetector = () => {
         <div
           className="modal fade"
           id="exampleModal"
-          tabindex="-1"
+          tabIndex="-1"
           aria-labelledby="exampleModalLabel"
           aria-hidden="true"
         >

@@ -9,11 +9,29 @@
   align-items: center;
   flex-direction: column;
   display: flex;
-  width: 60%;
+  width: 50%;
   margin: 100px auto 0 auto;
   padding: 30px;
+  /* background-color: rgb(47, 26, 47); */
+  border-radius: 64px;
+  min-height: auto;
+  height: 60vh;
+}
+input {
+  text-align: center;
+}
+.reportacc {
+  justify-content: space-between;
 }
 .boton {
   margin-top: 10px;
-  width: 500px;
+  width: 100%;
+}
+.texth {
+  text-size-adjust: 40%;
+}
+usernm {
+  display: flex;
+  justify-self: center;
+  text-align: center;
 }

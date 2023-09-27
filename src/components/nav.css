@@ -1,8 +1,9 @@
-/* /* .rside {
-  display: flex;
+/* .clr {
+  background-color:;
+  color: white;
 } */
-rside {
-  /* justify-content: space-between; */
+nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
 }
